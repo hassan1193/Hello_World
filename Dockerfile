@@ -1,7 +1,8 @@
 FROM jenkins/jenkins:lts
 USER root
+SHELL ["/bin/bash", "-c"]
 RUN curl -sSL https://get.docker.com/ | sh
-USER jenkins
+
 
 
 FROM node:alpine
