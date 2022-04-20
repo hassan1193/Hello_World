@@ -1,11 +1,5 @@
-FROM jenkins/jenkins:lts
-USER root
-SHELL ["/bin/bash", "-c"]
-RUN curl -sSL https://get.docker.com/ | sh
-
-
-
 FROM node:alpine
+RUN apk add docker
 WORKDIR /app
 COPY package.json ./
 COPY ./ ./
